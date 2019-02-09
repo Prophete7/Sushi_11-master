@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_cart_product_name"
+            android:text="Sushi"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:id="@+id/txt_count"
+                android:layout_alignParentRight="true"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                app:backGroundColor="@color/colorAccent"
+                ></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_comment"
+        android:hint="Comment"
+        android:lines="1"
+        android:minLines="2"
+        android:inputType="textMultiLine"
+        android:layout_margin="8dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Ilosc sztuk"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioGroup
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rdi_sizeS"
+                        android:text="5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/rdi_sizeM"
+                        android:text="10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/rdi_sizeL"
+                        android:text="15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:text="Potwierdz zamowienie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
